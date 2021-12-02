@@ -1,0 +1,24 @@
+<div>{{ detail?.title }} {{ detail?.number }}</div>
+
+<div>
+  {{ detail?.state }}
+</div>
+
+<div class="align-detail">
+  <div class="body-text">
+    <p>{{ detail?.body }}</p>
+  </div>
+
+  <div>
+    Labels
+
+    <div *ngFor="let d of detail?.labels; let index = index">
+      <label
+        [ngStyle]="{
+          color: '#' + d.color
+        }"
+        >{{ d.name }}</label
+      >
+    </div>
+  </div>
+</div>
