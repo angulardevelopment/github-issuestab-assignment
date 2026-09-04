@@ -4,11 +4,14 @@ import { environment } from './../../environments/environment';
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-issue-detail',
   templateUrl: './issue-detail.component.html',
-  styleUrls: ['./issue-detail.component.scss']
+  styleUrls: ['./issue-detail.component.scss'],
+  imports: [CommonModule]
+
 })
 export class IssueDetailComponent implements OnInit {
   detail;

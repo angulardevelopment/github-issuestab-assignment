@@ -12,13 +12,15 @@
   <div>
     Labels
 
-    <div *ngFor="let d of detail?.labels; let index = index">
-      <label
+    @for (d of detail?.labels; track d; let index = $index) {
+      <div>
+        <label
         [ngStyle]="{
           color: '#' + d.color
         }"
-        >{{ d.name }}</label
-      >
+          >{{ d.name }}</label
+          >
+        </div>
+      }
     </div>
   </div>
-</div>

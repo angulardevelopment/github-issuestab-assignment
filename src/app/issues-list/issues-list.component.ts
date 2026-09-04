@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment } from './../../environments/environment';
 import { ApiService } from './../services/api.service';
 import { Component, OnInit } from '@angular/core';
@@ -6,7 +7,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-issues-list',
   templateUrl: './issues-list.component.html',
-  styleUrls: ['./issues-list.component.scss']
+  styleUrls: ['./issues-list.component.scss'],
+  imports: [ReactiveFormsModule, FormsModule]
 })
 export class IssuesListComponent implements OnInit {
   data;

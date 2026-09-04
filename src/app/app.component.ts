@@ -4,10 +4,12 @@ import { combineLatest, from, Observable, of, throwError } from 'rxjs';
 import { catchError, concatAll, map, mergeMap, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { BehaviorSubject } from 'rxjs';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  imports: [CommonModule]
 })
 export class AppComponent {
   title = 'github';
